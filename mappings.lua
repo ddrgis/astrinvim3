@@ -23,6 +23,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- Press * to search for the term under the cursor or a visual selection and then press a key below to replace all instances of it in the current file.
+    ["<leader>r"] = { "<cmd>:%s///g<Left><Left>", desc = "replace with *" },
+    ["<leader>rc"] = { "<cmd>:%s///gc<Left><Left><Left>", desc = "replace with * and confirm" },
   },
   t = {
     -- setting a mapping to false will disable it
